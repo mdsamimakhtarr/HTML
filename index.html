@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animation</title>
+  <style>
+    *{
+       margin : 10 px;
+       padding: auto;
+       background-color: aqua;
+       background-image: url('https://images.pexels.com/photos/20134134/pexels-photo-20134134.jpeg');
+    }
+    body{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      height: 100vh;
+      flex-direction: column;
+      box-shadow: rgb(236, 4, 4);
+      background-color: aqua;
+     
+      margin-top: 50px;
+    }
+    .card{
+      width:250px;
+      height:300px;
+      display: flex;
+      justify-content: center;
+      border-radius: 20 px ;
+      box-shadow: 30 3px 30px rgb(4, 245, 245);
+      transform: rotate(-10deg);
+      animation : float 3s ease-in-out infinite;
+      z-index: 2;
+
+    }
+    .card-image{
+      width :110%;
+      height: 110%;
+      border-radius: 5px;
+      box-shadow: 20px 10px 30px rgb(229, 12, 12);
+     
+    
+    }
+    .card-image:hover,.card-image2:hover{
+      transition: all 0.5s ease-in-out;
+     background-color:red;
+     transform: scale(2.2);
+    }
+
+    .card-image2{
+      width :110%;
+      height: 110%;
+      border-radius: 5px;
+      box-shadow: 20px 10px 30px red;
+      display: flex;
+      justify-content: right;
+    
+    }
+    @keyframes float{
+      0%,100% {
+        transform:rotate((10deg)) translateY(30px);
+      }
+      50% {
+        transform: rotate(30deg) translateY(30px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="https://images.pexels.com/photos/32212906/pexels-photo-32212906.jpeg" alt="Image" class="card-image"> 
+  </div>
+  <div class="card">
+    <img src="https://images.pexels.com/photos/15930851/pexels-photo-15930851.jpeg" alt="Image" class="card-image2">
+</body>
+</html>
